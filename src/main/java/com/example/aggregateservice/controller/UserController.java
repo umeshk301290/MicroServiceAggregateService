@@ -32,7 +32,7 @@ public class UserController {
     headers.setContentType(MediaType.APPLICATION_JSON);
 	HttpEntity entity = new HttpEntity<>(null,headers);
 	String userUrl = "http://10.8.3.43:8080/users/"+userid;
-	String orderUrl = "http://10.8.0.143:8080/orders/"+userid;
+	String orderUrl = "http://10.8.0.179:8080/orders/"+userid;
 	ResponseEntity<User> user = template.exchange(userUrl,HttpMethod.GET,entity ,User.class);
 	ResponseEntity<User> userOrder = template.exchange(orderUrl,HttpMethod.GET,entity ,User.class);
 	AggregateDetails aggregateDetails = new AggregateDetails();
